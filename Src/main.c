@@ -23,7 +23,6 @@
 #include "tim.h"
 #include "gpio.h"
 #include "AbLa/func/infrarot.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -102,13 +101,15 @@ int main(void)
   while (1)
   {
 
+
+	  float test = InfrarotSensorRead();
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
 
   }
 }
   /* USER CODE END 3 */
-
 
 /**
   * @brief System Clock Configuration

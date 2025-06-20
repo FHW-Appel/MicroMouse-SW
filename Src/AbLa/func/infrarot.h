@@ -9,14 +9,32 @@
 #define SRC_ABLA_FUNC_INFRAROT_H_
 
 
-uint32_t sensorValue;
-float InfrarotSensorRead()
+
+float InfrarotSensorRead(uint32_t sensorfr)
 {
-    HAL_ADC_Start(&hadc);
-    HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
-    uint32_t sensorValue = HAL_ADC_GetValue(&hadc);
-    HAL_ADC_Stop(&hadc);
-    return sensorValue;
+
+		uint32_t sensor[4];
+	    HAL_ADC_Start(&hadc);
+
+	    for (int i = 0; i < 4; i++) {
+	        HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
+	        sensor[i] = HAL_ADC_GetValue(&hadc);
+	    }
+	    HAL_ADC_Stop(&hadc);
+
+
+	    if (sensorfr==1){
+    return sensor[0];}
+
+	    else if (sensorfr==2){
+    return sensor[1];}
+
+	    else if (sensorfr==3){
+    return sensor[2];}
+
+	    else if (sensorfr==4){
+    return sensor[3];}
+
 }
 
 

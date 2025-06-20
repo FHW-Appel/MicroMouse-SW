@@ -98,14 +98,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+
+
   while (1)
   {
 
 
-	  float test = InfrarotSensorRead();
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
 
   }
 }

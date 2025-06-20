@@ -22,7 +22,7 @@
 #include "i2c.h"
 #include "tim.h"
 #include "gpio.h"
-#include "AbLa/func/infrarot.h"
+#include "infrarot.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 

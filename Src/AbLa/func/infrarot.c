@@ -1,14 +1,12 @@
 /*
- * infrarot.h
+ * infrarot.c
  *
- *  Created on: Jun 13, 2025
+ *  Created on: Jun 20, 2025
  *      Author: jelly
  */
 
-#ifndef SRC_ABLA_FUNC_INFRAROT_H_
-#define SRC_ABLA_FUNC_INFRAROT_H_
-
-
+#include "adc.h"
+#include "infrarot.h"
 
 float InfrarotSensorRead(uint32_t sensorfr)
 {
@@ -36,7 +34,3 @@ float InfrarotSensorRead(uint32_t sensorfr)
     return sensor[3];}
 
 }
-
-
-
-#endif /* SRC_ABLA_FUNC_INFRAROT_H_ */

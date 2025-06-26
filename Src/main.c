@@ -23,6 +23,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "AbLa/func/infrarot.h"
+#include "MPU6050.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -93,17 +94,26 @@ int main(void)
   MX_ADC_Init();
   MX_I2C1_Init();
   MX_TIM2_Init();
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
+  MPU6050_t mpu;
+  MPU6050_Init(&hi2c1);
+  HAL_Delay(100);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  float winkel_roll;
+  float winkel_pitch;
+
   while (1)
   {
 
-    /* USER CODE END WHILE */
-    /* USER CODE BEGIN 3 */
+//https://copilot.microsoft.com/chats/FYgKykFCZ5mJUaKNrBXk1
+	  MPU6050_Read_MPU(&hi2c1, &mpu);
+	  //Get_Accel_Angles(&mpu);
+	  int16_t ax = mpu.Accel_X_RAW;
+	      int16_t ay = mpu.Accel_Y_RAW;
+	      int16_t gx = mpu.Gyro_X_RAW;
+	      int16_t gy = mpu.Gyro_Y_RAW;
+
+
 
   }
 }

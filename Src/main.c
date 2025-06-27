@@ -23,6 +23,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "AbLa/func/infrarot.h"
+#include "motor.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -97,19 +98,17 @@ int main(void)
 
   /* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
 
-    /* USER CODE END WHILE */
-    /* USER CODE BEGIN 3 */
+ while (1){
 
-  }
-}
+   int Abstand = InfrarotSensorRead();
+
+ }
+   motorlinks(50.00,1,0);
+  // motorrechts();
   /* USER CODE END 3 */
 
-
+}
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -175,9 +174,12 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+
   }
-  /* USER CODE END Error_Handler_Debug */
 }
+
+  /* USER CODE END Error_Handler_Debug */
+
 
 #ifdef  USE_FULL_ASSERT
 /**

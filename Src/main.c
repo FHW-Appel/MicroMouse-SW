@@ -22,7 +22,9 @@
 #include "i2c.h"
 #include "tim.h"
 #include "gpio.h"
+#include "MPU6050.h"
 #include "infrarot.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -92,10 +94,9 @@ int main(void)
   MX_ADC_Init();
   MX_I2C1_Init();
   MX_TIM2_Init();
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
+  MPU6050_t mpu;
+  MPU6050_Init(&hi2c1);
+  //HAL_Delay(100);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
@@ -108,7 +109,7 @@ int main(void)
 
   }
 }
-  /* USER CODE END 3 */
+
 
 /**
   * @brief System Clock Configuration

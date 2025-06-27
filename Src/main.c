@@ -22,8 +22,8 @@
 #include "i2c.h"
 #include "tim.h"
 #include "gpio.h"
-#include "AbLa/func/infrarot.h"
 #include "MPU6050.h"
+#include "infrarot.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -99,16 +99,16 @@ int main(void)
   //HAL_Delay(100);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  float winkel_roll;
-  float winkel_pitch;
+
+
 
   while (1)
   {
 
 
+
   }
 }
-
 
 
 /**

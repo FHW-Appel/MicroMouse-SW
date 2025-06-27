@@ -94,8 +94,6 @@ int main(void)
   MX_ADC_Init();
   MX_I2C1_Init();
   MX_TIM2_Init();
-  MPU6050_t mpu;
-  MPU6050_Init(&hi2c1);
   //HAL_Delay(100);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -104,7 +102,7 @@ int main(void)
 
   while (1)
   {
-
+      GyroSensor();
 
 
   }

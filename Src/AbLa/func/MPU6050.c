@@ -57,6 +57,19 @@ void MPU6050_Read_MPU(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct)
 
 
 }
+
+void GyroSensor () {
+	  MPU6050_t mpu;
+	  MPU6050_Init(&hi2c1);
+	  MPU6050_Read_MPU(&hi2c1, &mpu);
+	        int16_t ax = mpu.Accel_X_RAW;
+	        int16_t ay = mpu.Accel_Y_RAW;
+	        int16_t az = mpu.Accel_Z_RAW;
+	        int16_t gx = mpu.Gyro_X_RAW;
+	        int16_t gy = mpu.Gyro_Y_RAW;
+	        int16_t gz = mpu.Gyro_Z_RAW;
+}
+
 /*
 void Calculate_Accel_Values(MPU6050_t *Raw_Values){
     //Scale values

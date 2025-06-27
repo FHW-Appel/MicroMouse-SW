@@ -51,6 +51,7 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+void GyroSensor(void);
 
 /* USER CODE BEGIN EFP */
 

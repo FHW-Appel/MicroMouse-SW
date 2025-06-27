@@ -45,13 +45,14 @@ void MPU6050_Read_MPU(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct)
 
     DataStruct->Gyro_X_RAW = (int16_t)(Rec_Data[0] << 8 | Rec_Data[1]);
     DataStruct->Gyro_Y_RAW = (int16_t)(Rec_Data[2] << 8 | Rec_Data[3]);
-
+    DataStruct->Gyro_Z_RAW = (int16_t)(Rec_Data[4] << 8 | Rec_Data[5]);
     // Read 6 BYTES of data starting from ACCEL_XOUT_H register
 
     HAL_I2C_Mem_Read(I2Cx, MPU6050_ADDR, ACCEL_XOUT_H_R_ACCEL_XOUT, 1, Rec_Data, 6, i2c_timeout);
 
     DataStruct->Accel_X_RAW = (int16_t)(Rec_Data[0] << 8 | Rec_Data[1]);
     DataStruct->Accel_Y_RAW = (int16_t)(Rec_Data[2] << 8 | Rec_Data[3]);
+    DataStruct->Accel_Z_RAW = (int16_t)(Rec_Data[4] << 8 | Rec_Data [5]);
 
 
 

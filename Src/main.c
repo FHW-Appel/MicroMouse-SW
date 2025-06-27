@@ -96,7 +96,7 @@ int main(void)
   MX_TIM2_Init();
   MPU6050_t mpu;
   MPU6050_Init(&hi2c1);
-  HAL_Delay(100);
+  //HAL_Delay(100);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   float winkel_roll;
@@ -105,19 +105,10 @@ int main(void)
   while (1)
   {
 
-//https://copilot.microsoft.com/chats/FYgKykFCZ5mJUaKNrBXk1
-	  MPU6050_Read_MPU(&hi2c1, &mpu);
-	  //Get_Accel_Angles(&mpu);
-	  int16_t ax = mpu.Accel_X_RAW;
-	      int16_t ay = mpu.Accel_Y_RAW;
-	      int16_t gx = mpu.Gyro_X_RAW;
-	      int16_t gy = mpu.Gyro_Y_RAW;
-
-
 
   }
 }
-  /* USER CODE END 3 */
+
 
 
 /**

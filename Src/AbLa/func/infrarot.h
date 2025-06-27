@@ -2,7 +2,7 @@
  * infrarot.h
  *
  *  Created on: Jun 13, 2025
- *      Author: jelly
+ *      Author: Phivo
  */
 
 #ifndef SRC_ABLA_FUNC_INFRAROT_H_
